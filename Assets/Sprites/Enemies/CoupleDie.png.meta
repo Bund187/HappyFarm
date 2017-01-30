@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: a59d6dc40dc422747bb26b3c1f489607
+timeCreated: 1485519233
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CoupleDie_0
+    21300002: CoupleDie_1
+    21300004: CoupleDie_2
+    21300006: CoupleDie_3
+    21300008: CoupleDie_4
+    21300010: CoupleDie_5
+    21300012: CoupleDie_6
+    21300014: CoupleDie_7
+    21300016: CoupleDie_8
+    21300018: CoupleDie_9
+    21300020: CoupleDie_10
+    21300022: CoupleDie_11
+    21300024: CoupleDie_12
+    21300026: CoupleDie_13
+    21300028: CoupleDie_14
+    21300030: CoupleDie_15
+    21300032: CoupleDie_16
+    21300034: CoupleDie_17
+    21300036: CoupleDie_18
+    21300038: CoupleDie_19
+    21300040: CoupleDie_20
+    21300042: CoupleDie_21
+    21300044: CoupleDie_22
+    21300046: CoupleDie_23
+    21300048: CoupleDie_24
+    21300050: CoupleDie_25
+    21300052: CoupleDie_26
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CoupleDie_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoupleDie_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoupleDie_2
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoupleDie_3
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoupleDie_4
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoupleDie_5
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoupleDie_6
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: CoupleDie_7
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1
+        width: 180
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
