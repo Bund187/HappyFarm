@@ -47,8 +47,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AimController.cs" />
      <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CoupleBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\IAController.cs" />
+     <Compile Include="Assets\Scripts\MeleeAttackController.cs" />
+     <Compile Include="Assets\Scripts\PlayerAtributes.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ShootingController.cs" />
  <Reference Include="UnityEngine.UI">

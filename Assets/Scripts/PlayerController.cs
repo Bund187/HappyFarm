@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 	bool isMovingL=true, isMovingR = true, isMovingU = true, isMovingD = true, blockMove=false;
 	Animator anim;
 	SpriteRenderer spriteRend;
-	bool facingRight,isPaused,isPressed;
+	bool isPaused,isPressed;
 	string idiom="esp";
 	Rigidbody2D rigidb;
 
@@ -40,9 +40,8 @@ public class PlayerController : MonoBehaviour {
 
 		} else
 			isPressed = false;*/
+		
 	}
-
-
 
 	public void Pause(){
 		if (!isPressed) {
@@ -63,22 +62,16 @@ public class PlayerController : MonoBehaviour {
 			if ((xMove > 0f || xMove < 0f) || (yMove > 0f || yMove < 0f)) { 
 				if (isMovingR) {
 					if (xMove > 0f) {
-						//impulse = 0.1f;
-						//gunRend.flipX = false;
 						spriteRend.flipX = false;
 						anim.SetFloat ("Speed", moveSpeed);
-						//transform.Translate (new Vector3 (xMove * moveSpeed * Time.deltaTime, 0f, 0f));
 						rigidb.AddForce(new Vector2(impulse,0),ForceMode2D.Impulse);
 					}
 				}
 
 				if (isMovingL) {
 					if (xMove < 0f) {
-						//gunRend.flipX = true;
 						spriteRend.flipX = true;
 						anim.SetFloat ("Speed", moveSpeed);
-						//transform.Translate (new Vector3 (xMove * moveSpeed * Time.deltaTime, 0f, 0f));
-						//rigidb.AddForce(new Vector2(-0.1f,0),ForceMode2D.Impulse);
 						rigidb.AddForce(new Vector2(impulse*-1,0),ForceMode2D.Impulse);
 					}
 				}
@@ -86,7 +79,6 @@ public class PlayerController : MonoBehaviour {
 					if (yMove > 0f) {
 						
 						anim.SetFloat ("Speed", moveSpeed);
-						//transform.Translate (new Vector3 (0f, yMove * moveSpeed * Time.deltaTime, 0f));
 						rigidb.AddForce(new Vector2(0,impulse),ForceMode2D.Impulse);
 					}
 				}
@@ -95,7 +87,6 @@ public class PlayerController : MonoBehaviour {
 					if (yMove < 0f) {
 						
 						anim.SetFloat ("Speed", moveSpeed);
-						//transform.Translate (new Vector3 (0f, yMove * moveSpeed * Time.deltaTime, 0f));
 						rigidb.AddForce(new Vector2(0,impulse*-1),ForceMode2D.Impulse);
 					}
 

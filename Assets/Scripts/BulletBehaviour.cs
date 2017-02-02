@@ -21,9 +21,9 @@ public class BulletBehaviour : MonoBehaviour {
 	}
 	void Update(){
 		
-		if (transform.position.x < -4 || transform.position.x > 4) {
+		/*if (transform.position.x < -4 || transform.position.x > 4) {
 			Destroy (this.gameObject);
-		}
+		}*/
 	}
 	void FixedUpdate () {
 		Move ();
@@ -36,7 +36,11 @@ public class BulletBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.tag == "Enemy") {
-			col.gameObject.GetComponent<EnemyBehaviour> ().Die = true;
+			col.gameObject.GetComponent<CoupleBehaviour> ().Life-=1; //Se podria cambiar el Couple por un enemigo generico, ¿herencia?
+			Destroy(this.gameObject);
+		}
+		if (col.tag == "Limits") {
+			Destroy(this.gameObject);
 		}
 	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ShootingController : MonoBehaviour {
 
-	public GameObject bulletPrefab;
+	public GameObject bulletPrefab, melee;
 	public float rotAngle;
 
 	bool isPress,isShooting, isRight;
@@ -29,6 +29,15 @@ public class ShootingController : MonoBehaviour {
 		}
 
 		MoveAim ();
+		MeleeAttack ();
+	}
+
+	void MeleeAttack(){
+		if (Input.GetAxisRaw ("Fire2") != 0) {
+			print ("melee");
+			this.gameObject.SetActive (false);
+			melee.SetActive(true);
+		} 
 
 	}
 
@@ -38,10 +47,10 @@ public class ShootingController : MonoBehaviour {
 		isRight = transform.GetComponent<SpriteRenderer> ().flipX;
 		if (isShooting) {
 			if (isRight) {
-				Instantiate (bulletPrefab, new Vector2(transform.position.x - 0.15f/*1.25f*/, transform.position.y + 0.03f), Quaternion.identity);
+				Instantiate (bulletPrefab,transform.position /*new Vector2(transform.position.x - 0.15f, transform.position.y + 0.03f)*/, Quaternion.identity);
 
 			} else {
-				Instantiate (bulletPrefab, new Vector2 (transform.position.x + 0.15f/*-1.25f*/, transform.position.y + 0.03f/*-0.58f*/), Quaternion.identity);
+				Instantiate (bulletPrefab,transform.position /*new Vector2 (transform.position.x + 0.15f, transform.position.y + 0.03f)*/, Quaternion.identity);
 			}
 		}
 
