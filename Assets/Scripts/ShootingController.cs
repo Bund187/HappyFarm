@@ -6,7 +6,7 @@ public class ShootingController : MonoBehaviour {
 	public GameObject bulletPrefab, melee;
 	public float rotAngle;
 
-	bool isPress,isShooting, isRight;
+	bool isPress,isShooting, isRight, isPress2;
 	Animator anim;
 
 	void Start () {
@@ -33,11 +33,21 @@ public class ShootingController : MonoBehaviour {
 	}
 
 	void MeleeAttack(){
+		
 		if (Input.GetAxisRaw ("Fire2") != 0) {
-			print ("melee");
-			this.gameObject.SetActive (false);
-			melee.SetActive(true);
-		} 
+			if (!isPress2) {
+				float seconds = 0.5f;
+				seconds = seconds + Time.time;
+				melee.SetActive (true);
+				melee.GetComponent<MeleeAttackController> ().seconds = seconds;
+				print ("segundos=" + seconds);
+				this.gameObject.SetActive (false);
+				isPress2 = true;
+			}
+		} else {
+			isPress2 = false;
+		}
+
 
 	}
 

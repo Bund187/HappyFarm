@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
 	public bool canMove;
-	public SpriteRenderer gunRend;
+	public SpriteRenderer meleerend;
 	public float impulse;
 
 	GameObject pauseCanvas;
@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour {
 				if (isMovingR) {
 					if (xMove > 0f) {
 						spriteRend.flipX = false;
+						meleerend.flipX = false;
 						anim.SetFloat ("Speed", moveSpeed);
 						rigidb.AddForce(new Vector2(impulse,0),ForceMode2D.Impulse);
 					}
@@ -71,6 +72,7 @@ public class PlayerController : MonoBehaviour {
 				if (isMovingL) {
 					if (xMove < 0f) {
 						spriteRend.flipX = true;
+						meleerend.flipX = true;
 						anim.SetFloat ("Speed", moveSpeed);
 						rigidb.AddForce(new Vector2(impulse*-1,0),ForceMode2D.Impulse);
 					}

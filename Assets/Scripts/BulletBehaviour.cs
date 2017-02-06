@@ -19,12 +19,7 @@ public class BulletBehaviour : MonoBehaviour {
 		rotation = Quaternion.FromToRotation (Vector2.up, target - transform.position);
 		transform.rotation = rotation;
 	}
-	void Update(){
-		
-		/*if (transform.position.x < -4 || transform.position.x > 4) {
-			Destroy (this.gameObject);
-		}*/
-	}
+
 	void FixedUpdate () {
 		Move ();
 	}
@@ -36,7 +31,8 @@ public class BulletBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.tag == "Enemy") {
-			col.gameObject.GetComponent<CoupleBehaviour> ().Life-=1; //Se podria cambiar el Couple por un enemigo generico, ¿herencia?
+			col.gameObject.GetComponent<EnemyDashBehaviour> ().Life-=1; //Se podria cambiar el Couple por un enemigo generico, ¿herencia?
+			//print("vida enemy="+col.gameObject.GetComponent<CoupleBehaviour> ().Life);
 			Destroy(this.gameObject);
 		}
 		if (col.tag == "Limits") {

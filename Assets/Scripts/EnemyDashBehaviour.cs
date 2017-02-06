@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CoupleBehaviour : MonoBehaviour {
+public class EnemyDashBehaviour : MonoBehaviour {
 
-	bool die;
+	bool die,attacking;
 	Animator anim;
 	int life, directionCollision;
+	float auxTime=0;
+	//float attack;
 
-	public float speed, distance;
+	public float speed, distance,attack;
 
 	void Start () {
 		life = 10;
@@ -25,6 +27,8 @@ public class CoupleBehaviour : MonoBehaviour {
 			anim.SetBool ("die", die);
 			speed = 0;
 		}
+		if (attacking) {
+		}
 	}
 
 	void CoupleMove(){
@@ -33,9 +37,17 @@ public class CoupleBehaviour : MonoBehaviour {
 	}
 	void OnTriggerStay2D(Collider2D col){
 		if (col.tag == "Player") {
-			col.gameObject.GetComponent<PlayerAtributes> ().Life -= 0.1f;
-			//print ("Vida=" + col.gameObject.GetComponent<PlayerAtributes> ().Life);
+			attacking = true;
+			if (Time.time > (attack+auxTime)) {
+				auxTime= Time.time;
+				col.gameObject.GetComponent<PlayerAtributes> ().Life -= 1f;
+				print ("Vida=" + col.gameObject.GetComponent<PlayerAtributes> ().Life);
+			}
 		}
+	}
+
+	void OnTriggerExit2D(Collider2D col){
+		attacking = false;
 	}
 	void CollisionDetector(){
 		

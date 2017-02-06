@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MeleeAttackController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyRangeBehaviour.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="45" Column="2" />
-      <File FileName="Assets\Scripts\ShootingController.cs" Line="6" Column="34" />
-      <File FileName="Assets\Scripts\BulletBehaviour.cs" Line="42" Column="25" />
-      <File FileName="Assets\Scripts\CoupleBehaviour.cs" Line="37" Column="6" />
-      <File FileName="Assets\Scripts\IAController.cs" Line="33" Column="129" />
-      <File FileName="Assets\Scripts\PlayerAtributes.cs" Line="17" Column="23" />
-      <File FileName="Assets\Scripts\MeleeAttackController.cs" Line="13" Column="3" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="67" Column="42" />
+      <File FileName="Assets\Scripts\IAController.cs" Line="46" Column="60" />
+      <File FileName="Assets\Scripts\BulletBehaviour.cs" Line="34" Column="50" />
+      <File FileName="Assets\Scripts\ShootingController.cs" Line="32" Column="18" />
+      <File FileName="Assets\Scripts\MeleeAttackController.cs" Line="35" Column="50" />
+      <File FileName="Assets\Scripts\EnemyDashBehaviour.cs" Line="54" Column="40" />
+      <File FileName="Assets\Scripts\EnemyRangeBehaviour.cs" Line="8" Column="3" />
+      <File FileName="Assets\Scripts\GenericMethods.cs" Line="6" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

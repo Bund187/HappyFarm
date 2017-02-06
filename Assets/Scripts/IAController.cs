@@ -6,7 +6,7 @@ public class IAController : MonoBehaviour {
 	public int dashing;
 
 	void FixedUpdate(){
-		Dash (1);
+		//Dash (1);
 	}
 
 	void OnTriggerStay2D(Collider2D col){
@@ -18,7 +18,7 @@ public class IAController : MonoBehaviour {
 	}
 
 	void Dash(int dash){
-		
+		Rigidbody2D rigidb = transform.parent.GetComponent<Rigidbody2D> ();
 		float x = transform.position.x - GameObject.Find ("Player").transform.position.x;
 		float y = transform.position.y - GameObject.Find ("Player").transform.position.y;
 
@@ -28,12 +28,14 @@ public class IAController : MonoBehaviour {
 			y *= -1;
 
 		if (x > y) {
-			switch(transform.parent.GetComponent<CoupleBehaviour> ().DirectionCollision){
+			switch(transform.parent.GetComponent<EnemyDashBehaviour> ().DirectionCollision){
 			case 1:
-				transform.parent.Translate (Vector2.up * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
+				rigidb.AddForce(new Vector2(0,dash),ForceMode2D.Impulse);
+				//transform.parent.Translate (Vector2.up * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
 				break;
 			case 2:
-				transform.parent.Translate (Vector2.down * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
+				rigidb.AddForce(new Vector2(0,dash*-1),ForceMode2D.Impulse);
+				//transform.parent.Translate (Vector2.down * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
 				break;
 			}
 
@@ -41,12 +43,14 @@ public class IAController : MonoBehaviour {
 		} 
 		if(x < y){
 
-			switch (transform.parent.GetComponent<CoupleBehaviour> ().DirectionCollision) {
+			switch (transform.parent.GetComponent<EnemyDashBehaviour> ().DirectionCollision) {
 			case 3:
-				transform.parent.Translate (Vector2.right * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
+				rigidb.AddForce(new Vector2(dash,0),ForceMode2D.Impulse);
+				//transform.parent.Translate (Vector2.right * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
 				break;
 			case 4:
-				transform.parent.Translate (Vector2.left * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
+				rigidb.AddForce(new Vector2(dash*-1,0),ForceMode2D.Impulse);
+				//transform.parent.Translate (Vector2.left * Time.deltaTime * (transform.parent.GetComponent<CoupleBehaviour> ().speed * dash));
 				break;
 			}
 

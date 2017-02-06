@@ -48,9 +48,11 @@
      <Compile Include="Assets\Scripts\AimController.cs" />
      <Compile Include="Assets\Scripts\BulletBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CoupleBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
+     <Compile Include="Assets\Scripts\EnemyDashBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyRangeBehaviour.cs" />
+     <Compile Include="Assets\Scripts\GenericMethods.cs" />
      <Compile Include="Assets\Scripts\IAController.cs" />
      <Compile Include="Assets\Scripts\MeleeAttackController.cs" />
      <Compile Include="Assets\Scripts\PlayerAtributes.cs" />
